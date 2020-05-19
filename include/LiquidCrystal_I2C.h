@@ -1,10 +1,7 @@
-
-
 #ifndef LiquidCrystal_I2C_h
 #define LiquidCrystal_I2C_h
 
-#include <mgos.h>
-#include <mgos_i2c.h>
+#include <stdint.h>
 
 #define DEFAULT_LCD_ADDRESS 0x27 //< Default I2C Slave Address
 
@@ -56,6 +53,8 @@
 #define DB6 64 //B01000000 // P6 : DB6 bit
 #define DB7 128 //B10000000 // P7 : DB7 bit
 
+
+#ifdef __cplusplus
 
 class LiquidCrystal_I2C {
   public:
@@ -114,4 +113,10 @@ private:
     struct mgos_i2c *myi2c;
 };
 
-#endif
+#else 
+
+typedef struct LiquidCrystal_I2CTag LiquidCrystal_I2C;
+
+#endif /* __cplusplus */
+
+#endif /* LiquidCrystal_I2C_h */

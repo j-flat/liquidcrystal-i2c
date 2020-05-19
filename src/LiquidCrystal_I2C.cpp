@@ -1,5 +1,7 @@
-#include "LiquidCrystal_I2C.h"
 #include <math.h>
+#include <mgos.h>
+#include <mgos_i2c.h>
+#include "LiquidCrystal_I2C.h"
 
 LiquidCrystal_I2C::LiquidCrystal_I2C(uint8_t addr) {
     myi2c = mgos_i2c_get_global();

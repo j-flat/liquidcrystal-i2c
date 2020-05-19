@@ -4,9 +4,9 @@ let LCD_I2C = {
     _bgn: ffi('void mgos_lcd_i2c_begin(void *, int, int, int)'),
     _clr: ffi('void mgos_lcd_i2c_clear(void *)'),
     _hom: ffi('void mgos_lcd_i2c_home(void *)'),
-    _stcrs: ffi('void mgos_lcd_i2c_setCursor(void *, int, int)'),
+    _stcrs: ffi('void mgos_lcd_i2c_set_cursor(void *, int, int)'),
     _prntchar: ffi('void mgos_lcd_i2c_print(void *, char *)'),
-    _prntdouble: ffi('void mgos_lcd_i2c_printDouble(void *, double, int)'),
+    _prntdouble: ffi('void mgos_lcd_i2c_print_double(void *, double, int)'),
 
     DEFAULT_LCD_ADDRESS: 0x27,
     LCD_5x10DOTS: 0x04,
